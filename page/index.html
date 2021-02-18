@@ -14,7 +14,7 @@
     <title>My(PPの)Portfolio</title>
 </head>
 
-<body>
+<body id="bg">
     <header>
         <h1>PPのportfolio</h1>
     </header>
@@ -46,26 +46,59 @@
     </main>
 
     <script>
+
+        var nowTime = function (){
+            var now = new Date();
+
+            return
+        }
+
         var addZero = function (value){
             if (value < 10) value = '0' + value;
             return value;
         }
 
-        document.getElementById('start_stop').addEventListener('click',function (){
-        var now = new Date();
-        var seconds = now.getSeconds();
-        //document.write('<p id="timer">00:00:00</p>');
-        seconds = addZero(seconds);
+        document.getElementById('start_stop').addEventListener('click', function (){
+            var start = new Date();
 
-        var minute = now.getMinutes();
-        minute = addZero(minute);
 
-        var hours = now.getHours();
-        hours = addZero(hours);
 
-        document.getElementById('timer').innerHTML = hours + ':' +
-            minute + ':' + seconds;
         });
+
+        var goTimer = function (){
+            var now = new Date();
+
+            var seconds = now.getSeconds();
+            //document.write('<p id="timer">00:00:00</p>');
+            seconds = addZero(seconds);
+
+            var minutes = now.getMinutes();
+            minutes = addZero(minutes);
+
+            var hours = now.getHours();
+            hours = addZero(hours);
+
+
+            document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
+        }
+
+        goTimer();
+        setInterval(goTimer,1000);
+
+        var changeBackGrounds = function (){
+            var now = new  Date();
+
+            if(now.getHours() > 19 || now.getHours() < 6){
+                document.getElementById('bg').style.backgroundColor = '#123';
+            }
+
+        }
+
+        changeBackGrounds();
+        //setInterval(changeBackGrounds,60000)
+
+
+
     </script>
 
 </body>
