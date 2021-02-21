@@ -23,7 +23,7 @@
 
     <div class="navigate">
         <h2 class="menu_button"><img src="imgs/menu.png"><span class="menu" id="menu_fig">Menu</span></h2>
-        <h3 id="point1">・<a href="" target="_self">プロジェクト</a></h3>
+        <h3 id="point1">・<a href="projects.html" target="_self">プロジェクト</a></h3>
         <h3 id="point2">・<a href="" target="_self">使用した言語等</a></h3>
         <h3 id="point3">・<a href="" target="_self">各種リンク</a></h3>
         <script>
@@ -39,39 +39,33 @@
 
         <div class="container1">
             <div class="panel">
-
-                <h1 id="main_fig">メイン</h1>
-                <p id="timer">00:00:00</p>
-                <div>
-                    <button id="start_stop" class="btn btn-lg btn-primary">START</button>
+                <div class="main_body">
+                    <h1 id="main_fig"> [自己紹介] </h1>
+                    <p id="timer">00:00:00</p>
+                    <!--div>
+                       <button id="start_stop" class="btn btn-lg btn-primary">START</button>
+                    </div-->
                 </div>
-
             </div>
-
-
-
         </div>
     </main>
 
     <script>
 
-        var nowTime = function (){
+        /*var nowTime = function (){
             var now = new Date();
 
             return
-        }
+        }*/
 
         var addZero = function (value){
             if (value < 10) value = '0' + value;
             return value;
         }
 
-        document.getElementById('start_stop').addEventListener('click', function (){
+        /*document.getElementById('start_stop').addEventListener('click', function (){
             var start = new Date();
-
-
-
-        });
+        });*/
 
         var goTimer = function (){
             var now = new Date();
@@ -86,8 +80,9 @@
             var hours = now.getHours();
             hours = addZero(hours);
 
+            var today = now.getFullYear() + '/' + (now.getMonth()+1) + '/' + now.getDate();
 
-            document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('timer').innerHTML = today + '<br>' + hours + ':' + minutes + ':' + seconds;
         }
 
         goTimer();
@@ -99,7 +94,7 @@
             if(now.getHours() > 19 || now.getHours() < 6){
                 document.getElementById('bg').style.backgroundColor = /*'#123'*/ '#123';
                 //document.getElementById('menu_fig').style.color = 'white';
-                document.getElementById('main_fig').style.color = 'white';
+                //document.getElementById('main_fig').style.color = 'white';
                 document.getElementById('point1').style.color = 'white';
                 document.getElementById('point2').style.color = 'white';
                 document.getElementById('point3').style.color = 'white';

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta http-equiv="X-UA-Compatible" content="ie=edge"-->
+    <meta property="og:locate" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PPのポートフォリオ">
+    <meta property="og:description" content="GitHub Pagesを利用したポートフォリオです。">
+    <link rel="stylesheet" href="css/test.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>My(PPの)Portfolio</title>
+</head>
+
+<body id="bg">
+<header>
+    <h1>PPのportfolio</h1>
+</header>
+
+<main>
+
+    <div class="navigate">
+        <h2 class="menu_button"><img src="imgs/menu.png"><span class="menu" id="menu_fig">Menu</span></h2>
+        <h3 id="point1">・<a href="" target="_self">プロジェクト</a></h3>
+        <h3 id="point2">・<a href="" target="_self">使用した言語等</a></h3>
+        <h3 id="point3">・<a href="" target="_self">各種リンク</a></h3>
+        <script>
+            var today = new Date();
+            var todayHtml = today.getFullYear() + '/' + (today.getMonth()+1) + '/' +
+                today.getDate();
+            document.write('<p class="date">' + todayHtml + '</p>');
+        </script>
+
+    </div>
+
+    <div class="liquid_border"></div>
+
+    <div class="container1">
+        <div class="panel">
+            <div class="main_body">
+                <h1 id="main_fig"> [プロジェクト] </h1>
+                <!--p id="timer">00:00:00</p-->
+                <!--div>
+                   <button id="start_stop" class="btn btn-lg btn-primary">START</button>
+                </div-->
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+
+    /*var nowTime = function (){
+        var now = new Date();
+
+        return
+    }*/
+
+    var addZero = function (value){
+        if (value < 10) value = '0' + value;
+        return value;
+    }
+
+    /*document.getElementById('start_stop').addEventListener('click', function (){
+        var start = new Date();
+    });*/
+
+    var goTimer = function (){
+        var now = new Date();
+
+        var seconds = now.getSeconds();
+        //document.write('<p id="timer">00:00:00</p>');
+        seconds = addZero(seconds);
+
+        var minutes = now.getMinutes();
+        minutes = addZero(minutes);
+
+        var hours = now.getHours();
+        hours = addZero(hours);
+
+        var today = now.getFullYear() + '/' + (now.getMonth()+1) + '/' + now.getDate();
+
+        document.getElementById('timer').innerHTML = today + '<br>' + hours + ':' + minutes + ':' + seconds;
+    }
+
+    goTimer();
+    setInterval(goTimer,1000);
+
+    var changeBackGrounds = function (){
+        var now = new  Date();
+
+        if(now.getHours() > 19 || now.getHours() < 6){
+            document.getElementById('bg').style.backgroundColor = /*'#123'*/ '#123';
+            //document.getElementById('menu_fig').style.color = 'white';
+            //document.getElementById('main_fig').style.color = 'white';
+            document.getElementById('point1').style.color = 'white';
+            document.getElementById('point2').style.color = 'white';
+            document.getElementById('point3').style.color = 'white';
+        }
+
+    }
+
+    changeBackGrounds();
+    //setInterval(changeBackGrounds,60000)
+
+
+
+</script>
+
+</body>
+
+</html>
