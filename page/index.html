@@ -19,11 +19,13 @@
         <h1>PPのportfolio</h1>
     </header>
 
-    <nav>
-        <h2>メニュー</h2>
-        <h3><a href="" target="_self">プロジェクト</a></h3>
-        <h3><a href="" target="_self">使用した言語等</a></h3>
-        <h3><a href="" target="_self">各種リンク</a></h3>
+    <main>
+
+    <nav class="navigate">
+        <h2><img src="imgs/menu.png"><span class="menu">Menu</span></h2>
+        <h3>・<a href="" target="_self">プロジェクト</a></h3>
+        <h3>・<a href="" target="_self">使用した言語等</a></h3>
+        <h3>・<a href="" target="_self">各種リンク</a></h3>
         <script>
             var today = new Date();
             var todayHtml = today.getFullYear() + '/' + (today.getMonth()+1) + '/' +
@@ -33,10 +35,10 @@
 
     </nav>
 
-    <main>
-        <div class="container">
+
+        <div class="container1">
             <h1>メイン</h1>
-            <p id="timer">00:00:00</p>
+            <p class="timer">00:00:00</p>
 
             <div>
                 <button id="start_stop" class="btn btn-lg btn-primary">START</button>
