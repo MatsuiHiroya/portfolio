@@ -13,9 +13,7 @@ main {
 }
 
 .navigate{
-
     /*padding-right: 10px;*/
-
     float: left;
     width: 15%;
 }
@@ -44,10 +42,19 @@ main {
 }
 
 .container1{
+    background-image: url("../imgs/paper.jpg");
+    background-repeat: repeat;
     float: left;
     margin: 0;
     text-align: center;
     width: 84%;
+}
+
+.panel{
+    margin: 0 auto;
+    width: 90%;
+    height: 1000px;
+    background-color: #fff
 }
 
 /*スマホ向けサイズ*/
@@ -55,9 +62,16 @@ main {
     .container1{
         float: none;
         text-align: center;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         /*display: inline-block;*/
+    }
+
+    .panel{
+        margin: 0 auto;
+        width: 90%;
+        height: 800px;
+        background-color: #fff
     }
 
     .navigate{
@@ -72,7 +86,7 @@ main {
 
     .liquid_border{
         height: 0;
-        margin: 0 0 15px 0;
+        margin: 0;
         float: none;
         border-right: none;
         border-top: thick solid #bababa;
