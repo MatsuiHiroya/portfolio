@@ -27,6 +27,12 @@ main {
     height: 1000px;
 }
 
+.menu_button{
+    border-radius: 10px;
+    border: 2px solid #000;
+    background-color: #D3D3D3;
+}
+
 .navigate h2{
     margin: 10px;
     font-size: 45px;
