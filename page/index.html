@@ -21,7 +21,7 @@
 
     <main>
 
-    <nav class="navigate">
+    <div class="navigate">
         <h2><img src="imgs/menu.png"><span class="menu">Menu</span></h2>
         <h3>・<a href="" target="_self">プロジェクト</a></h3>
         <h3>・<a href="" target="_self">使用した言語等</a></h3>
@@ -33,12 +33,13 @@
             document.write('<p class="date">' + todayHtml + '</p>');
         </script>
 
-    </nav>
+    </div>
 
+        <div class="liquid_border"></div>
 
         <div class="container1">
             <h1>メイン</h1>
-            <p class="timer">00:00:00</p>
+            <p id="timer">00:00:00</p>
 
             <div>
                 <button id="start_stop" class="btn btn-lg btn-primary">START</button>
@@ -91,7 +92,7 @@
             var now = new  Date();
 
             if(now.getHours() > 19 || now.getHours() < 6){
-                document.getElementById('bg').style.backgroundColor = '#123';
+                document.getElementById('bg').style.backgroundColor = /*'#123'*/ '#fff';
             }
 
         }

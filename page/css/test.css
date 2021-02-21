@@ -6,14 +6,28 @@ header h1 {
     font-size: 18px;
 }
 
-.navigate{
-    border-right: thick solid #bababa;
-    padding-right: 10px;
-    height: 1000px;
-    float: left;
+main {
+    width: 100%;
+    margin: 0 auto;
+    display: inline;
 }
 
-nav h2{
+.navigate{
+
+    /*padding-right: 10px;*/
+
+    float: left;
+    width: 15%;
+}
+
+.liquid_border{
+    float: left;
+    margin: 0;
+    border-right: thick solid #bababa;
+    height: 1000px;
+}
+
+.navigate h2{
     margin: 10px;
     font-size: 45px;
 }
@@ -23,27 +37,58 @@ nav h2{
     font-family: 'Times New Roman', Times , serif;
 }
 
-/*main{
-
-    width: 87.5%;
-    margin: auto;
-}*/
-
 .container1{
     float: left;
+    margin: 0;
     text-align: center;
-    width: 77%;
-    margin: 0 auto;
-    /*display: inline-block;*/
+    width: 84%;
 }
 
+/*スマホ向けサイズ*/
+@media only screen and (max-width: 900px){
+    .container1{
+        float: none;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        /*display: inline-block;*/
+    }
+
+    .navigate{
+        width: 20%;
+        float: none;
+        /*padding-right: unset;*/
+    }
+
+    .navigate h3{
+        margin-left: 30px;
+    }
+
+    .liquid_border{
+        height: 0;
+        margin: 0 0 15px 0;
+        float: none;
+        border-right: none;
+        border-top: thick solid #bababa;
+    }
+
+    .menu{
+        font-size: 30px;
+    }
+
+    .navigate a{
+        font-size: 18px;
+    }
+}
+
+/*PC半画面以下*//*
 @media only screen and (max-width: 960px){
     .container1{
         float: left;
         text-align: center;
         width: 80%;
         margin: 0 auto;
-        /*display: inline-block;*/
+
     }
 
     .navigate{
@@ -62,19 +107,20 @@ nav h2{
     .navigate a{
         font-size: 18px;
     }
-}
+}*/
 
+/*PC大画面以下*//*
 @media only screen and (min-width: 1600px){
     .container1{
         float: left;
         text-align: center;
         width: 85%;
         margin: 0 auto;
-        /*display: inline-block;*/
-    }
-}
 
-.timer {
+    }
+}*/
+
+#timer {
     font-size: 36px;
     border: 1px solid #ccc;
     margin: 30px auto;
