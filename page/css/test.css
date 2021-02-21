@@ -61,7 +61,7 @@ main {
     }
 
     .navigate{
-        width: 50%;
+        width: 60%;
         float: none;
         /*padding-right: unset;*/
     }
@@ -79,7 +79,7 @@ main {
     }
 
     .menu{
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .navigate a{
